@@ -5,15 +5,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { IoHomeOutline,IoPersonOutline ,IoNewspaper    } from "react-icons/io5";
 import { GrBlog } from "react-icons/gr";
 import { PiProjectorScreenChartBold } from "react-icons/pi";
+import logo from "../assets/logo-gutivanian.png" ;
+
 function NavBar(){
 
     return(
         <Navbar 
-        expand="lg" 
+        expand="xl" 
         className="fixed-top nav-blur">
             <Container>
                 <Navbar.Brand href="#Home">
-                    Gutivanian
+                    <img src={logo} className="img-fluid logo" alt="brand" />
                 </Navbar.Brand>
                 <Navbar.Toggle 
                 aria-controls="basic-navbar-nav">
@@ -21,7 +23,7 @@ function NavBar(){
                     <span></span>
                     <span></span>
                 </Navbar.Toggle>
-                <Navbar.Collapse id= "basic-navbar-nav">
+                <Navbar.Collapse id= "responsive-navbar-nav">
                     <Nav className="ms-auto justify-content-end">
                         <Nav.Item>
                             <Nav.Link href = "#home">
@@ -63,6 +65,23 @@ function NavBar(){
                                 </span>
                             </Nav.Link>
                         </Nav.Item>
+                        <NavDropdown title = "Follow Me" id = "basic-nav-dropdown">
+                            <NavDropdown.Item>
+                                Github
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Linked In
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Facebook
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Instagram
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                Twitter
+                            </NavDropdown.Item>
+                        </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

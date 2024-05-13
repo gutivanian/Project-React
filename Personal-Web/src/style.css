@@ -17,8 +17,12 @@
     --light-blue4: #F8F9D7
 }
 
+*{
+    color: aliceblue !important;
+}
+
 body{
-    background-color: var(--dark-blue3) !important;
+    background-color: var(--dark-blue1) !important;
 }
 
 /* ------------- */
@@ -28,14 +32,14 @@ body{
 .navbar{
     position: fixed !important;
     transition: all 0.3s ease-out 0s !important;
-    padding: 0.3rem 2rem !important;
+    padding: 0.3rem 0.2rem !important;
     font-size: 1.2rem !important;
     color: aliceblue !important;
 }
 
 .nav-blur{
     background: transparent !important;
-    backdrop-filter: blur(30px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
 
@@ -50,3 +54,138 @@ body{
     font-size: 2rem !important;
     font-family: "Ubuntu Sans", sans-serif !important;
 }
+
+.navbar-brand img{
+    width: 250px;
+    height:80px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0rem;
+    padding-top: 1rem; 
+  }
+
+  .navbar-toggler {
+    position: relative !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+  
+  .navbar-toggler span {
+    display: block !important;
+    background-color: #be50f4 !important;
+    height: 4px !important;
+    width: 27px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    transform: rotate(0deg) !important;
+    left: 0 !important;
+    opacity: 1 !important;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: 0 !important;
+  }
+  
+  .navbar-toggler span:nth-child(1),
+  .navbar-toggler span:nth-child(3) {
+    transition: transform 0.35s ease-in-out !important;
+    transition: transform 0.35s ease-in-out !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute !important;
+    left: 12px !important;
+    top: 10px !important;
+    transform: rotate(135deg) !important;
+    opacity: 0.9 !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px !important;
+    visibility: hidden !important;
+    background-color: transparent !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute !important;
+    left: 12px !important;
+    top: 10px !important;
+    transform: rotate(-135deg) !important;
+    opacity: 0.9 !important;
+  }  
+
+ /* --------- */
+  /* Footer */
+  /* --------- */
+  .footer {
+    background-color:transparent !important;
+    bottom: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 8px !important ;
+  }
+  .footer-copywright {
+    display: flex;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-copywright span {
+   color: white;
+   font-size: 1.3rem;
+   margin-bottom: 1rem;
+   padding-top: 0.3rem;
+  }
+
+  .footer-body {
+    z-index: 1;
+    text-align: center !important;
+  }
+
+  .social-icons {
+    display: inline-block !important;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-copywright {
+      text-align: center !important;
+    }
+  
+    .footer-body {
+      text-align: center !important;
+    }
+  }
+  
+  .footer h3 {
+    font-size: 1em;
+    color: white !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+  .footer-icons {
+    margin-top: 0.5em !important;
+    margin-bottom: 1rem !important;
+    padding-top: 1.2rem !important;
+  }
+  
+  .blockquote-footer {
+    color: #a588c0 !important;
+  }
+
+  .footer-copywright img{
+    width: 250px;
+    height:80px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0rem; 
+  }
+
+
+  /* ------------- */
+  /* Home */
+  /* ------------- */
+  .home-header {
+    padding-top: 180px !important;
+  }
+  
