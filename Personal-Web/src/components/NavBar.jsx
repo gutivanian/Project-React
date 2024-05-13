@@ -10,7 +10,7 @@ function NavBar(){
     return(
         <Navbar 
         expand="lg" 
-        className="fixed-top bg-body-tertiary">
+        className="fixed-top nav-blur">
             <Container>
                 <Navbar.Brand href="#Home">
                     Gutivanian
@@ -22,35 +22,45 @@ function NavBar(){
                     <span></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id= "basic-navbar-nav">
-                    <Nav className="me-auto justify-content-center">
+                    <Nav className="ms-auto justify-content-end">
                         <Nav.Item>
                             <Nav.Link href = "#home">
                                 <IoHomeOutline></IoHomeOutline>
-                                Home
+                                <span className='ms-2'>
+                                    Home
+                                </span>
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href = "#link">
+                            <Nav.Link href = "#about">
                                 <IoPersonOutline></IoPersonOutline>
-                                About
+                                <span className='ms-2'>
+                                    About
+                                </span>
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href = "#link">
+                            <Nav.Link href = "#projects">
                             <PiProjectorScreenChartBold></PiProjectorScreenChartBold>
-                                Projects
+                                <span className='ms-2'>
+                                    Projects
+                                </span>
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href = "#link">
+                            <Nav.Link href = "#resume">
                                 <IoNewspaper></IoNewspaper>
-                                Resume
+                                <span className='ms-2'>
+                                    Resume
+                                </span>
                             </Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link href = "#link">
+                            <Nav.Link href = "#blogs">
                                 <GrBlog></GrBlog>
-                                Blogs
+                                <span className='ms-2'>
+                                    Blogs
+                                </span>
                             </Nav.Link>
                         </Nav.Item>
                     </Nav>

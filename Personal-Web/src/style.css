@@ -1,4 +1,27 @@
 /* ------------- */
+/* General */
+/* ------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    /* color dark */
+    --dark-blue1: 	#03002e;
+    --dark-blue2: #1B1A55;
+    --dark-blue3: #535C91;
+    --dark-blue4: #9290C3;
+
+    /* color light */
+    --light-blue1: #6E85B7;
+    --light-blue2: #B2C8DF;
+    --light-blue3: #C4D7E0;
+    --light-blue4: #F8F9D7
+}
+
+body{
+    background-color: var(--dark-blue3) !important;
+}
+
+/* ------------- */
 /* NavBar */
 /* ------------- */
 
@@ -7,4 +30,23 @@
     transition: all 0.3s ease-out 0s !important;
     padding: 0.3rem 2rem !important;
     font-size: 1.2rem !important;
+    color: aliceblue !important;
+}
+
+.nav-blur{
+    background: transparent !important;
+    backdrop-filter: blur(30px) !important;
+}
+
+
+.nav-link{
+    padding: 0.3rem 1rem !important;
+    color: aliceblue !important;
+}
+
+.navbar-brand{
+    color: var(--light-blue2) !important;
+    font-weight: 600 !important;
+    font-size: 2rem !important;
+    font-family: "Ubuntu Sans", sans-serif !important;
 }
