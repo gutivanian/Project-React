@@ -23,63 +23,68 @@ const Footer = () => {
             <span>Copyright © {year}</span>
           </Col>
           <Col md="4" className="footer-body">
-            <ul className="footer-icons">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/gutivanian"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="github"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Gutivanian"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="twitter"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/gutivan-alief-syahputra-47b69318b?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=id"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="linkedin"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://instagram.com/gutivanian"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="instagram"
-                >
-                  <SlSocialInstagram></SlSocialInstagram>
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://facebook.com/starefondofne"
-                  style={{ color: "white" }}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  aria-label="facebook"
-                >
-                  <MdFacebook></MdFacebook>
-                </a>
-              </li>
-            </ul>
+            <Row className = "footer-connect">
+              Connect With Me
+            </Row>
+            <Row>
+              <ul className="footer-icons">
+                <li className="social-icons">
+                  <a
+                    href="https://github.com/gutivanian"
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="github"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://twitter.com/Gutivanian"
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="twitter"
+                  >
+                    <AiOutlineTwitter />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://www.linkedin.com/in/gutivan-alief-syahputra-47b69318b?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=id"
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="linkedin"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://instagram.com/gutivanian"
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="instagram"
+                  >
+                    <SlSocialInstagram></SlSocialInstagram>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a
+                    href="https://facebook.com/starefondofne"
+                    style={{ color: "white" }}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="facebook"
+                  >
+                    <MdFacebook></MdFacebook>
+                  </a>
+                </li>
+              </ul>
+            </Row>
           </Col>
         </Row>
       </Container>

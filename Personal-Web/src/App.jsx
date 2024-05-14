@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.css';
 import Page1 from './components/Home/Page1';
+import About from './components/About/About';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
       </div>
       <div>
         <Page1></Page1>
+        <About></About>
       </div>
       <Footer></Footer>
     </div>
