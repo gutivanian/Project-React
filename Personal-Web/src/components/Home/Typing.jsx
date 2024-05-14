@@ -13,6 +13,7 @@ function Typing() {
             autoStart: true,
             loop: false,
             deleteSpeed: 50,
+            wrapperClassName: "typewriter"
           }}
           onInit={(typewriter) => {
             typewriter
@@ -40,6 +41,7 @@ function Typing() {
             autoStart: true,
             loop: true,
             deleteSpeed: 50,
+            wrapperClassName: "typewriter"            
           }}
         />
       )}

@@ -15,7 +15,7 @@ function App() {
 
         </NavBar>
       </div>
-      <div>
+      <div className='app-body'>
         <Page1></Page1>
         <About></About>
       </div>
