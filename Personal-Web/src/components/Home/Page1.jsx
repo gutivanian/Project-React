@@ -19,12 +19,14 @@ function Page1() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Nice To Meet You!{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
-                </span>
-              </h1>
+              <div className = "welcome">
+                <h1 style={{ paddingBottom: 15 }} className="heading">
+                  Nice To Meet You!{" "}
+                  <span className="wave" role="img" aria-labelledby="wave">
+                    👋🏻
+                  </span>
+                </h1>
+              </div>
 
               <h1 className="heading-name">
                 I'M
@@ -109,7 +111,6 @@ function Page1() {
           </Row>
         </Container>
       </Container>
-      <Page2 />
     </section>
   );
 }

@@ -34,7 +34,7 @@ function Typing() {
           options={{
             strings: [
               "Web Developer",
-              "MERN Stack Developer",
+              "MERN Developer",
               "Data Scientist",
               "Data Analyst",
             ],
