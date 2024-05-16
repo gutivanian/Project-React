@@ -228,7 +228,7 @@ body{
   }
 
   .home-img {
-    /* margin-top: 10rem !important; */
+    margin-top: 10rem !important;
     justify-content: center !important;
     padding-top: 10em !important;
     /* padding-bottom: 1em; */
@@ -238,7 +238,10 @@ body{
     align-items: center !important;
     box-sizing: border-box !important;
     /* padding-top: 4rem; */
-    padding-left: 0rem
+    padding-left: 0rem;
+    padding-bottom: 25rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../src/assets/Foto-Atas.png");
+    background-position:  right -4rem top -1rem;
   }
 /* 
   .home-img img {
