@@ -90,13 +90,13 @@ function Page1() {
             </Col>
 
             <Col md={5} >
-              <div className="home-photo">
-                <img
-                  src={FotoAtas}
-                  alt="home pic"
-                  style={{ maxHeight: "450px" }}
-                />
-              </div>
+            <div className="home-img">
+              <img
+                    src={FotoAtas}
+                    alt="home pic"
+                    style={{ maxHeight: "450px" }}
+                  />
+            </div>
             </Col>
           </Row>
         </Container>
