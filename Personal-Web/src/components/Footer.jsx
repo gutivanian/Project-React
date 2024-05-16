@@ -27,63 +27,13 @@ const Footer = () => {
               Connect With Me
             </Row>
             <Row>
-              <ul className="footer-icons">
-                <li className="social-icons">
-                  <a
-                    href="https://github.com/gutivanian"
-                    style={{ color: "white" }}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="github"
-                  >
-                    <AiFillGithub />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://twitter.com/Gutivanian"
-                    style={{ color: "white" }}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="twitter"
-                  >
-                    <AiOutlineTwitter />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://www.linkedin.com/in/gutivan-alief-syahputra-47b69318b?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=id"
-                    style={{ color: "white" }}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="linkedin"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://instagram.com/gutivanian"
-                    style={{ color: "white" }}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="instagram"
-                  >
-                    <SlSocialInstagram></SlSocialInstagram>
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a
-                    href="https://facebook.com/starefondofne"
-                    style={{ color: "white" }}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label="facebook"
-                  >
-                    <MdFacebook></MdFacebook>
-                  </a>
-                </li>
-              </ul>
+            <ul className="social-icons">
+                <li><a href="" className="social-icon"> <i className="fab fa-facebook icon fb-footer"></i></a></li>
+                <li><a href="" className="social-icon"> <i className="fab fa-instagram icon ig-footer"></i></a></li>
+                <li><a href="" className="social-icon"> <i className="fab fa-twitter icon tw-footer"></i></a></li>
+                <li><a href="" className="social-icon"> <i className="fab fa-linkedin icon li-footer"></i></a></li>
+                <li><a href="" className="social-icon"> <i className="fab fa-github icon gh-footer"></i></a></li>
+            </ul>
             </Row>
           </Col>
         </Row>

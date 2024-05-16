@@ -51,7 +51,7 @@ function Page1() {
                         rel="noreferrer"
                         className="icon-colour  home-social-icons"
                       >
-                        <AiFillGithub />
+                         <i className="fab fa-github icon"></i>
                       </a>
                     </li>
                     <li className="social-icons">
@@ -61,7 +61,17 @@ function Page1() {
                         rel="noreferrer"
                         className="icon-colour  home-social-icons"
                       >
-                        <AiOutlineTwitter />
+                        <i className="fab fa-facebook-f icon"></i>
+                      </a>
+                    </li>
+                    <li className="social-icons">
+                      <a
+                        href="https://twitter.com/Soumyajit4419"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="icon-colour  home-social-icons"
+                      >
+                        <i className="fab fa-twitter icon"></i>
                       </a>
                     </li>
                     <li className="social-icons">
@@ -71,7 +81,7 @@ function Page1() {
                         rel="noreferrer"
                         className="icon-colour  home-social-icons"
                       >
-                        <FaLinkedinIn />
+                        <i className="fab fa-linkedin icon"></i>
                       </a>
                     </li>
                     <li className="social-icons">
@@ -81,7 +91,7 @@ function Page1() {
                         rel="noreferrer"
                         className="icon-colour home-social-icons"
                       >
-                        <AiFillInstagram />
+                        <i className="fab fa-instagram icon"></i>
                       </a>
                     </li>
                   </ul>
