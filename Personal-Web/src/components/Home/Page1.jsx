@@ -90,9 +90,11 @@ function Page1() {
             </Col>
 
             <Col md={5} >
-            <div className="home-img">
-
-            </div>
+<div className="img-container">
+              <div className="home-img">
+  
+              </div>
+</div>
             </Col>
           </Row>
         </Container>

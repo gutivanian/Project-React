@@ -228,12 +228,12 @@ body{
   }
 
   .home-img {
-    margin-top: 10rem !important;
+    /* margin-top: 10rem !important; */
     justify-content: center !important;
     padding-top: 10em !important;
     /* padding-bottom: 1em; */
     border: #03002e 1px;
-    border-radius: 30%;
+    border-radius: 5%;
     margin-bottom: 0 !important;
     align-items: center !important;
     box-sizing: border-box !important;
@@ -241,7 +241,7 @@ body{
     padding-left: 0rem;
     padding-bottom: 25rem;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../src/assets/Foto-Atas.png");
-    background-position:  right -4rem top -1rem;
+    background-position:  right 45% top ;
   }
 /* 
   .home-img img {
@@ -251,7 +251,31 @@ body{
     margin: 2rem;
   } */
  
+  .img-container {
+    margin-top: 10rem !important;
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .img-container:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
   
+
   
 
   @media (max-width: 767px) {
