@@ -295,7 +295,7 @@ ul.social-icons {
   /* Home */
   /* ------------- */
   .home-section{
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,1)),url("../src/assets/dark-1.jpg");
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,1)),url("../src/assets/dark-1.jpg");
   }
   
   .home-section::after{
@@ -501,8 +501,12 @@ ul.social-icons {
 
 
   /* ------------- */
-  /* Home */
+  /* About */
   /* ------------- */
   .about-section{
     background: black !important;
+  }
+
+  blockquote {
+    background: black;
   }

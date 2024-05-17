@@ -10,7 +10,7 @@ import Tools from "./Tools";
 function About() {
   return (
     <Container fluid className="about-section">
-      {/* <Particle /> */}
+      {/* <Partcle /> */}
       <Container>
         <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col
