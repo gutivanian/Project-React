@@ -102,11 +102,11 @@ function Page1() {
             </Col>
 
             <Col md={5} >
-<div className="img-container">
-              <div className="home-img">
-  
+              <div className="img-container">
+                <div className="home-img">
+                      
+                </div>
               </div>
-</div>
             </Col>
           </Row>
         </Container>
