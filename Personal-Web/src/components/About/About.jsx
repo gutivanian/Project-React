@@ -8,29 +8,69 @@ import Aboutcard from "./AboutCard";
 import imgAbout from "../../assets/img-about.jpg";
 import Tools from "./Tools";
 import ImageSlider from "./ImageSlider";
+import img1 from "../../assets/about-1.jpeg";
+import img2 from "../../assets/about-2.jpeg";
+import img3 from "../../assets/about-3.jpeg";
+import img4 from "../../assets/about-4.jpeg";
+import img5 from "../../assets/about-5.jpeg";
+import img6 from "../../assets/about-6.jpeg";
+import img7 from "../../assets/about-7.jpeg";
+import img8 from "../../assets/about-8.jpeg";
+import img9 from "../../assets/about-9.jpeg";
+import img10 from "../../assets/about-10.jpeg";
+import img11 from "../../assets/about-11.jpeg";
+import { FaDownload } from "react-icons/fa";
+import cvid from "../../assets/CV-id.pdf";
+import Button from 'react-bootstrap/Button';
+
 
 const images = [
   {
-    imgURL:
-      "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    imgURL: img1,
     imgAlt: "img-1"
   },
   {
-    imgURL:
-      "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    imgURL: img2,
     imgAlt: "img-2"
   },
   {
-    imgURL:
-      "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    imgURL: img3,
     imgAlt: "img-3"
   },
   {
-    imgURL:
-      "https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    imgURL: img4,
     imgAlt: "img-4"
-  }
-];
+  },
+  {
+    imgURL: img5,
+    imgAlt: "img-5"
+  },
+  {
+    imgURL: img6,
+    imgAlt: "img-6"
+  },
+  {
+    imgURL: img7,
+    imgAlt: "img-7"
+  },
+  {
+    imgURL: img8,
+    imgAlt: "img-8"
+  },
+  {
+    imgURL: img9,
+    imgAlt: "img-9"
+  },
+  {
+    imgURL: img10,
+    imgAlt: "img-10"
+  },
+  {
+    imgURL: img11,
+    imgAlt: "img-11"
+  },
+]
+
 function About() {
   return (
     <Container fluid className="about-section">
@@ -52,28 +92,26 @@ function About() {
           </Col>
           <Col
             md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            style={{ paddingTop: "25px", paddingBottom: "0px" }}
             className="about-img"
           >
             <Row className="about-img-row">
-              {/* <img src={imgAbout} alt="about" className="img-fluid" /> */}
-              <ImageSlider>
-                {images.map((image, index) => {
-                  return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
-                })}
-              </ImageSlider>
+              <div className="about-img-container">
+                {/* <img src={imgAbout} alt="about" className="img-fluid" /> */}
+                <ImageSlider>
+                  {images.map((image, index) => {
+                    return <img key={index} src={image.imgURL} alt={image.imgAlt} />;
+                  })}
+                </ImageSlider>
+              </div>
             </Row>
-            <Row className="about-motto">
-                <p>
-                Apart from coding, some other activities that I love to do!
-                </p>
-                <ul>
-                  <li>Traveling</li>
-                  <li>Playing Chess</li>
-                  <li>Reading</li>
-                  <li>Doing Science</li>
-                  <li>Listening to Music</li>
-                </ul>
+            <Row>
+              <div className="cv">
+                <h2 className = "main-name">More info <span className="underlined">about me</span></h2>
+                <Button href={cvid} download className="download-cv">
+                  <FaDownload/> &nbsp;Download My Resume
+                </Button>
+              </div>
             </Row>
           </Col>
         </Row>
