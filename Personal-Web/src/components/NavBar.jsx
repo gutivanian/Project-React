@@ -57,14 +57,14 @@ function NavBar(){
                                 </span>
                             </Nav.Link>
                         </Nav.Item>
-                        <Nav.Item>
+                        {/* <Nav.Item>
                             <Nav.Link href = "#blogs">
                                 <GrBlog></GrBlog>
                                 <span className='ms-2'>
                                     Blogs
                                 </span>
                             </Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item> */}
                         <NavDropdown title = "Follow Me" id = "basic-nav-dropdown">
                             <NavDropdown.Item>
                                 Github

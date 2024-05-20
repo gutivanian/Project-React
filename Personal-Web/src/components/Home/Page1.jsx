@@ -11,6 +11,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Page2 from "./Page2";
 import Typing from "./Typing";
 
+
 function Page1() {
   return (
     <section>
@@ -19,19 +20,21 @@ function Page1() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <div className = "welcome">
-                <h1 style={{ paddingBottom: 15 }} className="heading">
-                  Nice To Meet You!{" "}
-                  <span className="wave" role="img" aria-labelledby="wave">
-                    👋🏻
-                  </span>
-                </h1>
-              </div>
-
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> GUTIVAN ALIEF SYAHPUTRA</strong>
-              </h1>
+                <div className="welcome">
+                  <div>
+                    <h1 style={{ paddingBottom: 15 }} className="heading">
+                      Nice To Meet You!{" "}
+                      <span className="wave" role="img" aria-labelledby="wave">
+                        👋🏻
+                      </span>
+                    </h1>
+                  </div>
+    
+                  <h1 className="heading-name">
+                    I'M
+                    <strong className="main-name"> GUTIVAN ALIEF SYAHPUTRA</strong>
+                  </h1>
+                </div>
 
               <div className="typewriter-box">
                 <Typing />
@@ -104,7 +107,7 @@ function Page1() {
             <Col md={5} >
               <div className="img-container">
                 <div className="home-img">
-                      
+                    
                 </div>
               </div>
             </Col>
