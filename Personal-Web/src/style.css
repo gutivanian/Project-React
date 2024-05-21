@@ -910,16 +910,122 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
   }
 }
 
+/* ----------------- */
+/* Modal */
+/* ---------------- */
+
+.modal-content{
+  background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('./assets/3455256.jpg');
+  background-size: cover; /* Use cover to ensure the image covers the whole area */
+  backdrop-filter: brightness(50%);
+  border: 1rem solid #fff;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+
+  color: azure !important;
+  border-radius: 20px !important;
+
+
+}
+
 .modal-title{
   font-size: 30px;
-  color: black !important;
+  /* color: black !important; */
 }
 
 .modal-text{
-  color: black !important;
+  /* color: bl; */
 }
 
+.modal-container{
+  border: #03002e 1px solid !important;
+}
 .modal-container img{
   overflow: hidden;
   object-fit: contain !important; 
+  height: auto;
+  width: 100%;
 }
+
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+.skill-bar {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0px;
+  display: flex;
+  height: 10px;
+  width: 100% !important;
+}
+
+.advanced {
+  animation: advanced 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 10px;
+  width: 0;
+}
+
+  @keyframes learning {
+    0% { width: 0; }
+    100% { width: 30%; }
+  }
+
+  @keyframes  beginner {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+
+  @keyframes medium {
+    0% { width: 0; }
+    100% { width: 70%; }
+  }
+
+  @keyframes advanced {
+    0% { width: 0; }
+    100% { width: 85%; }
+  }
+
+  @keyframes expert {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+  .carousel-row{
+    height: auto !important;
+  }
+  .carousel-slide{
+    height: 20rem !important;
+  }
