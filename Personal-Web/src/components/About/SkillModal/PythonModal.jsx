@@ -21,27 +21,31 @@ function PythonModal(props) {
                     <img src={python} className='modal-logo' />
                 </Col>
                 <Col className="modal-container modal-text" sm = {8}>
+                  <br />
                   <Row>
-                    <span>My skill level</span>
+                    <span className='skill-title skill-text'>My skill level</span>
                     <div className='skill-bar'>
                       <div className="advanced">
                         
                       </div>
                     </div>
                   </Row>
+                  <br />
                   <Row>
-                    <span>Skill Use Rate</span>
+                    <span className='skill-title skill-text'>Skill Use Rate</span>
                     <div className='skill-bar'>
                       <div className="advanced">
                         
                       </div>
                     </div>
                   </Row>
+                  <br />
                   <Row>
-                    <span>Using the program since 2020</span>
+                    <span className='skill-text'>Using the program since 2020</span>
                   </Row>
+                  <br />
                   <Row>
-                    <span>I commonly use python for:</span>
+                    <span className='skill-text'>I commonly use python for:</span>
                     <ul>
                       <li>Data Analysis</li>
                       <li>Otomatization</li>

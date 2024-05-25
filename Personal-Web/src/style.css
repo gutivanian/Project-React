@@ -949,12 +949,17 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
 
 .modal-container{
   border: #03002e 1px solid !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .modal-container img{
   overflow: hidden;
   object-fit: contain !important; 
   height: auto;
   width: 100%;
+  align-self: center !important;
+  place-self: center !important;
+  transform: translateY(50%);
 }
 
 @keyframes load{
@@ -984,7 +989,7 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
   border-radius: 100px;
   align-items: center;
   position: relative;
-  padding: 0px;
+  padding: 0px !important;
   display: flex;
   height: 10px;
   width: 100% !important;
@@ -1023,6 +1028,20 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     0% { width: 0; }
     100% { width: 100%; }
   }
+
+  .skill-title{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  .skill-text{
+    font-style: none !important;
+    font-size: 1.1rem;
+    /* font-weight: 400; */
+  }
+
 
   .carousel-row{
     height: auto !important;
