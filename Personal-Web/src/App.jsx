@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.css';
 import Page1 from './components/Home/Page1';
 import About from './components/About/About';
+import Project from './components/Projects/Project';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <div className='app-body'>
         <Page1></Page1>
         <About></About>
+        <Project></Project>
       </div>
       <Footer></Footer>
     </div>
