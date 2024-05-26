@@ -828,6 +828,16 @@ ul.social-icons {
   filter: grayscale(0%) !important;
   transition: transform 0.3s ease;
   animation: border-flicker 2s linear infinite;
+  cursor: pointer;
+}
+
+.skill-active {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite, change-background 4s ease infinite !important;
 }
 
 @keyframes border-flicker {
@@ -913,7 +923,12 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
 /* ----------------- */
 /* Modal */
 /* ---------------- */
-
+.btn-close{
+  background-color: white !important;
+  transform: scale(1.2);
+  border-radius: 0 !important;
+  font-size: large;
+}
 .modal-content{
   background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('./assets/3455256.jpg');
   background-size: cover; /* Use cover to ensure the image covers the whole area */
@@ -937,18 +952,21 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
 
 }
 
-
 .modal-title{
   font-size: 30px;
   /* color: black !important; */
 }
 
-.modal-text{
-  /* color: bl; */
+.modal-text {
+  box-sizing: content-box; /* Pastikan border tidak termasuk dalam ukuran elemen */
+  padding: 2px; /* Padding untuk konten dalam elemen */
+  border-width: 3px; /* Lebar border */
+  border-style: solid; /* Gaya border */
+  border-image: linear-gradient(to right, #c23cfb, #4663ac) 1; /* Gradien border */
 }
 
 .modal-container{
-  border: #03002e 1px solid !important;
+  /* border: #03002e 1px solid !important; */
   justify-content: center !important;
   align-items: center !important;
 }
@@ -989,10 +1007,11 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
   border-radius: 100px;
   align-items: center;
   position: relative;
-  padding: 0px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   display: flex;
   height: 10px;
-  width: 100% !important;
+  width: 99% !important;
 }
 
 .advanced {
@@ -1042,10 +1061,49 @@ box-shadow: 0px 0px 78px 4px rgba(16,134,232,0.73);
     /* font-weight: 400; */
   }
 
+  .modal-list {
+    /* padding: 10px; */
+    list-style-type: none;
+    /* background-color:#ccc; */
+    width: 25%;
+    /*Centers the list*/
+    margin: 0 auto;
+  }
+  
+  /*Not required in my example, but you may need it*/
+  .modal-list li
+  {
+    text-align:left;
+    padding-left: 30px;
+    list-style-type: '👉';
+    padding-inline-start: 2px;
+    display: list-item !important;
+    transform: translateX(40px);
+  }
 
+  .carousel-inner{
+    max-width: 100% !important;
+    overflow: hidden !important;
+    max-height: 300px !important;
+  }
   .carousel-row{
     height: auto !important;
   }
+
+  .carousel-caption-custom a{
+    font-size: 1.5rem !important ;
+    text-decoration: none !important;
+  }
+
+  .carousel-row h3{
+    text-align: center !important;
+    font-size: 1.5rem;
+  }
   .carousel-slide{
-    height: 20rem !important;
+    max-height: 20rem !important;
+  }
+  .carousel-item img{
+    max-height: 20rem !important;
+    height: 200px !important;
+    width: 100%;
   }
