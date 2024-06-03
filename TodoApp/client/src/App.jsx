@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import {useState, useEffect} from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [todos, setTodos] = useState([])
+  
+  const handleChange = (e)=>{
+    const valueData = e.target.value
+    if (e.target.name === 'title'){
+      setTitle(valueData)
+    } else if (e.target.name === 'description'){
+      setDescription(valueData)
+    }
+  }
+  
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
+    const newTodo = {
+      title, description
+    }
+    setTodos([...todos, newTodo])
+    console.log(newTodo)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div className="judul">
+        Todo App
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="todo-container">
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder='Title' onChange={handleChange} value={title} name = 'title'/>
+          <input type="text " placeholder='Description' onChange = {handleChange} value={description} name ='description'/>
+          <button type='submit'>Add</button>
+        </form>
+
+      
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+    </div>
   )
 }
 
