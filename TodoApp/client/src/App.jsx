@@ -5,7 +5,11 @@ const App = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [todos, setTodos] = useState([]);
-  
+  const [isEdit, setIsEdit] = useState(false)
+  const [editTodoId, setEditTodoId] = useState(null)
+  const [changeTitle, setChangeTitle] = useState('')
+  const [changeDescription, setChangeDescription] = useState('')
+
   useEffect(() => {
     fetchData();
   }, []); // Fetch data once when the component mounts
@@ -25,17 +29,55 @@ const App = () => {
       setTitle(valueData);
     } else if (e.target.name === 'description') {
       setDescription(valueData);
+    } else if (e.target.name === 'changeDescription') {
+      setChangeDescription(valueData);
+    } else if (e.target.name === 'changeTitle') {
+      setChangeTitle(valueData);
     }
+      
   }
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newTodo = { title, description };
     try {
-      const response = await axios.post('http://localhost:5000/api/todos', newTodo);
-      setTodos([...todos, response.data]); // Add new todo to the state
+      await axios.post('http://localhost:5000/api/todos', newTodo);
+      fetchData(); // Add new todo to the state
       setTitle(''); // Clear input fields
       setDescription(''); // Clear input fields
+    } catch (error) {
+      console.error('Error adding todo:', error);
+    }
+  }
+const handleDelete = async (id) => {
+    try{
+      await axios.delete(`http://localhost:5000/api/todos/${id}`);
+      setTodos(todos.filter(todo => todo.id !== id))
+    } catch(err) {
+      console.error('Error delete todo:', err)
+    }
+  }
+
+  const handleEdit = async (id) => {
+    setIsEdit(true);
+    setEditTodoId(id);
+    const todoToEdit = todos.find(todo => todo.id === id);
+    setChangeTitle(todoToEdit.title);
+    setChangeDescription(todoToEdit.description);
+    console.log(isEdit)
+  }
+
+  
+  const handleEditSubmit = async (id,e) => {
+    e.preventDefault();
+    const updatedTodo = { title: changeTitle, description: changeDescription};
+    try {
+      await axios.put(`http://localhost:5000/api/todos/${id}`, updatedTodo);
+      fetchData(); // Add new todo to the state
+      setChangeTitle(''); // Clear input fields
+      setChangeDescription(''); // Clear input fields
+      setIsEdit(false);
+      setEditTodoId(null); //
     } catch (error) {
       console.error('Error adding todo:', error);
     }
@@ -58,8 +100,14 @@ const App = () => {
           <div key={todo.id}>
             <h1>{todo.title}</h1>
             <h2>{todo.description}</h2>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button onClick={()=>handleDelete(todo.id)}>Delete</button>
+            <button onClick={()=>handleEdit(todo.id)}>Edit</button>
+            {isEdit && editTodoId === todo.id &&
+            <form onSubmit={handleEditSubmit}>
+              <input type="text" placeholder='Title' onChange={handleChange} value={changeTitle} name='changeTitle' />
+              <input type="text" placeholder='Description' onChange={handleChange} value={changeDescription} name='changeDescription' />
+              <button type='submit'>Save Changes</button>
+            </form>  }
           </div>
         ))}
       </div>
