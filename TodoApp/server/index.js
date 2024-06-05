@@ -13,7 +13,7 @@ app.use(cors());
 // get all todos
 app.get('/api/todos', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM todos');
+        const result = await pool.query('SELECT * FROM todos ORDER BY id ASC');
         
         if (result.rows.length > 0) {
             res.status(200).json(result.rows);

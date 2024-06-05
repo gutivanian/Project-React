@@ -64,13 +64,13 @@ const handleDelete = async (id) => {
     const todoToEdit = todos.find(todo => todo.id === id);
     setChangeTitle(todoToEdit.title);
     setChangeDescription(todoToEdit.description);
-    console.log(isEdit)
   }
 
   
   const handleEditSubmit = async (id,e) => {
     e.preventDefault();
     const updatedTodo = { title: changeTitle, description: changeDescription};
+    console.log(updatedTodo);
     try {
       await axios.put(`http://localhost:5000/api/todos/${id}`, updatedTodo);
       fetchData(); // Add new todo to the state
@@ -79,6 +79,7 @@ const handleDelete = async (id) => {
       setIsEdit(false);
       setEditTodoId(null); //
     } catch (error) {
+      console.log('gagal')
       console.error('Error adding todo:', error);
     }
   }
@@ -103,7 +104,7 @@ const handleDelete = async (id) => {
             <button onClick={()=>handleDelete(todo.id)}>Delete</button>
             <button onClick={()=>handleEdit(todo.id)}>Edit</button>
             {isEdit && editTodoId === todo.id &&
-            <form onSubmit={handleEditSubmit}>
+            <form onSubmit={(e) => handleEditSubmit(todo.id,e)}>
               <input type="text" placeholder='Title' onChange={handleChange} value={changeTitle} name='changeTitle' />
               <input type="text" placeholder='Description' onChange={handleChange} value={changeDescription} name='changeDescription' />
               <button type='submit'>Save Changes</button>
